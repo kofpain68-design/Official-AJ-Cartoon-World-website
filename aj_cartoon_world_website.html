@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="AJ Cartoon World — 3D cartoon animation, AI videos, funny moments, emotional stories, and magical adventures.">
+  <title>AJ Cartoon World | Dream • Create • Animate</title>
+  <style>
+    :root{--bg:#070b16;--panel:#101a30;--blue:#08c9ff;--gold:#ffbf19;--white:#f7f9ff;--muted:#aebbd2}
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:var(--bg);color:var(--white);font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}
+    a{color:inherit;text-decoration:none}
+    .wrap{width:min(1120px,92%);margin:auto}
+    header{position:sticky;top:0;z-index:5;background:#070b16eF;border-bottom:1px solid #23314b;backdrop-filter:blur(12px)}
+    nav{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px 0}
+    .brand{font-weight:900;letter-spacing:.3px;font-size:1.1rem}
+    .brand span{color:var(--gold)}
+    .navlinks{display:flex;gap:20px;flex-wrap:wrap;color:var(--muted);font-size:.92rem}
+    .hero{padding:76px 0 60px;background:radial-gradient(ellipse at 70% 20%,#123b73 0,transparent 42%),radial-gradient(ellipse at 20% 90%,#53350a 0,transparent 38%)}
+    .hero-grid{display:grid;grid-template-columns:1.2fr .8fr;align-items:center;gap:34px}
+    .eyebrow{color:var(--blue);font-weight:800;text-transform:uppercase;letter-spacing:2px;font-size:.8rem}
+    h1{font-size:clamp(2.6rem,6vw,5.4rem);line-height:.98;letter-spacing:-2px;margin:16px 0}
+    h1 span{color:var(--gold);text-shadow:0 0 28px #ffbf1940}
+    .lead{font-size:1.1rem;line-height:1.75;color:var(--muted);max-width:620px}
+    .buttons{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px}
+    .btn{display:inline-flex;align-items:center;justify-content:center;padding:13px 19px;border-radius:999px;font-weight:800;border:1px solid #3c4c6b}
+    .btn.primary{background:linear-gradient(100deg,var(--gold),#ff8d21);color:#15100a;border:0}
+    .btn.secondary{background:#ffffff08}
+    .mascot{min-height:300px;border:1px solid #2d4970;border-radius:28px;background:linear-gradient(145deg,#123b73,#101a30 58%,#4d320b);display:flex;align-items:center;justify-content:center;text-align:center;padding:28px;box-shadow:0 25px 80px #0008;position:relative;overflow:hidden}
+    .mascot:before{content:"";position:absolute;width:240px;height:240px;border:3px solid var(--gold);border-radius:50%;box-shadow:0 0 40px #ffbf1940}
+    .mascot-inner{position:relative}
+    .mascot .emoji{font-size:5.2rem;filter:drop-shadow(0 12px 12px #0008)}
+    .mascot strong{display:block;font-size:1.55rem;line-height:1.1;margin-top:12px}
+    .mascot small{display:block;color:var(--blue);font-weight:800;letter-spacing:2px;margin-top:10px}
+    section{padding:58px 0}
+    .section-head{display:flex;align-items:end;justify-content:space-between;gap:20px;margin-bottom:24px}
+    h2{font-size:clamp(1.8rem,4vw,2.6rem);margin:0}
+    .sub{color:var(--muted);line-height:1.7;margin:9px 0 0}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .card{background:var(--panel);border:1px solid #253650;border-radius:20px;overflow:hidden}
+    .thumb{aspect-ratio:16/9;display:grid;place-items:center;background:linear-gradient(135deg,#143a69,#09101e 65%,#49320b);font-size:3rem}
+    .card-body{padding:18px}
+    .card h3{margin:0 0 8px;font-size:1.12rem}
+    .card p{margin:0 0 15px;color:var(--muted);line-height:1.55;font-size:.95rem}
+    .text-link{color:var(--blue);font-weight:800}
+    .shorts{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+    .short-card{min-height:205px;border-radius:18px;padding:18px;background:linear-gradient(150deg,#153b69,#101a30 65%,#593b09);border:1px solid #2d4566;display:flex;flex-direction:column;justify-content:space-between}
+    .short-card .icon{font-size:2rem}
+    .short-card strong{font-size:1.05rem}
+    .short-card span{font-size:.86rem;color:var(--muted)}
+    .cta{border-radius:26px;padding:34px;background:linear-gradient(110deg,#0d315c,#121a2d 62%,#523608);border:1px solid #345078;display:flex;align-items:center;justify-content:space-between;gap:24px}
+    .cta p{color:var(--muted);margin-bottom:0;line-height:1.6}
+    footer{border-top:1px solid #23314b;padding:28px 0;color:var(--muted);font-size:.9rem}
+    footer .foot{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+    @media(max-width:800px){.hero-grid{grid-template-columns:1fr}.mascot{min-height:250px}.grid{grid-template-columns:1fr 1fr}.shorts{grid-template-columns:1fr 1fr}.navlinks{gap:12px}}
+    @media(max-width:520px){.navlinks{display:none}.hero{padding:52px 0 36px}.grid{grid-template-columns:1fr}.shorts{grid-template-columns:1fr 1fr}.cta{align-items:flex-start;flex-direction:column}.section-head{align-items:flex-start;flex-direction:column}}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <nav>
+        <a class="brand" href="#home">AJ <span>CARTOON WORLD</span></a>
+        <div class="navlinks">
+          <a href="#videos">Videos</a><a href="#shorts">Shorts</a><a href="#about">About</a>
+        </div>
+        <a class="btn primary" href="https://www.youtube.com/@AJCartoonWorld-i2w?sub_confirmation=1" target="_blank" rel="noopener">Subscribe ↗</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="wrap hero-grid">
+        <div>
+          <div class="eyebrow">Dream • Create • Animate</div>
+          <h1>Welcome to<br><span>AJ Cartoon</span><br>World!</h1>
+          <p class="lead">Step into a world of imagination, 3D cartoon adventures, AI-powered animation, funny moments, and stories that make you feel something.</p>
+          <div class="buttons">
+            <a class="btn primary" href="https://www.youtube.com/@AJCartoonWorld-i2w/videos" target="_blank" rel="noopener">▶ Watch Videos</a>
+            <a class="btn secondary" href="https://www.youtube.com/@AJCartoonWorld-i2w/shorts" target="_blank" rel="noopener">Explore Shorts ↗</a>
+          </div>
+        </div>
+        <div class="mascot" aria-label="AJ Cartoon World cartoon-themed graphic">
+          <div class="mascot-inner">
+            <div class="emoji">🎬 ✨</div>
+            <strong>AJ CARTOON<br>WORLD</strong>
+            <small>SMALL STORIES • BIG DREAMS</small>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="videos">
+      <div class="wrap">
+        <div class="section-head">
+          <div><h2>Explore Our World</h2><p class="sub">Choose a collection and discover your next favourite animation.</p></div>
+          <a class="text-link" href="https://www.youtube.com/@AJCartoonWorld-i2w/videos" target="_blank" rel="noopener">View all videos ↗</a>
+        </div>
+        <div class="grid">
+          <article class="card"><div class="thumb">🎨</div><div class="card-body"><h3>3D Cartoon Adventures</h3><p>Creative characters, colourful worlds, and cinematic animated scenes.</p><a class="text-link" href="https://www.youtube.com/@AJCartoonWorld-i2w/videos" target="_blank" rel="noopener">Watch collection ↗</a></div></article>
+          <article class="card"><div class="thumb">⚡</div><div class="card-body"><h3>AI Animation</h3><p>Discover imaginative AI-powered visuals and cartoon transformations.</p><a class="text-link" href="https://www.youtube.com/@AJCartoonWorld-i2w/videos" target="_blank" rel="noopener">Explore videos ↗</a></div></article>
+          <article class="card"><div class="thumb">💖</div><div class="card-body"><h3>Stories & Emotions</h3><p>Short stories filled with humour, feelings, surprises, and adventure.</p><a class="text-link" href="https://www.youtube.com/@AJCartoonWorld-i2w/shorts" target="_blank" rel="noopener">Watch Shorts ↗</a></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="shorts">
+      <div class="wrap">
+        <div class="section-head">
+          <div><h2>Quick Cartoon Fix</h2><p class="sub">Short videos, big imagination. Tap below to see the latest Shorts on YouTube.</p></div>
+        </div>
+        <div class="shorts">
+          <a class="short-card" href="https://www.youtube.com/@AJCartoonWorld-i2w/shorts" target="_blank" rel="noopener"><span class="icon">▶️</span><strong>Latest Shorts</strong><span>Watch new uploads ↗</span></a>
+          <a class="short-card" href="https://www.youtube.com/@AJCartoonWorld-i2w/shorts" target="_blank" rel="noopener"><span class="icon">😄</span><strong>Funny Moments</strong><span>Find something fun ↗</span></a>
+          <a class="short-card" href="https://www.youtube.com/@AJCartoonWorld-i2w/shorts" target="_blank" rel="noopener"><span class="icon">🌈</span><strong>Fantasy Worlds</strong><span>Explore imagination ↗</span></a>
+          <a class="short-card" href="https://www.youtube.com/@AJCartoonWorld-i2w/shorts" target="_blank" rel="noopener"><span class="icon">💫</span><strong>Mini Stories</strong><span>Small stories, big dreams ↗</span></a>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="wrap">
+        <div class="cta">
+          <div><h2>Imagination starts here.</h2><p>AJ Cartoon World brings creative animation and entertaining stories together. Subscribe and join our growing cartoon universe.</p></div>
+          <a class="btn primary" href="https://www.youtube.com/@AJCartoonWorld-i2w?sub_confirmation=1" target="_blank" rel="noopener">Subscribe on YouTube ↗</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap foot">
+      <span>© 2026 AJ Cartoon World. All rights reserved.</span>
+      <span>Dream • Create • Animate</span>
+      <a href="https://www.youtube.com/@AJCartoonWorld-i2w" target="_blank" rel="noopener">YouTube Channel ↗</a>
+    </div>
+  </footer>
+</body>
+</html>
